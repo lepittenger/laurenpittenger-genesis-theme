@@ -1,0 +1,41 @@
+/*
+Widgets
+---------------------------------------------------------------------------------------------------- */
+
+.widget {
+	word-wrap: break-word;
+	margin-bottom: 24px;
+}
+
+.widget li {
+	list-style-type: none;
+}
+
+.widget ol {
+	margin-left: 24px;
+}
+
+.widget li li {
+	border: none;
+	margin: 0 0 0 18px;
+	padding: 0;
+}
+
+/* Featured Content
+--------------------------------------------- */
+
+.featured-content .entry {
+	font-size: 16px;
+	margin-bottom: 24px;
+}
+
+.featured-content .entry-title {
+	border: none;
+	font-size: 18px;
+	line-height: 1.2;
+	margin-bottom: 8px;
+}
+
+.featured-content .entry-title a {
+	text-decoration: none;
+}

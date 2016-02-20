@@ -1,0 +1,34 @@
+@media only screen and (max-width: 480px) {
+
+	.five-sixths,
+	.four-sixths,
+	.one-fourth,
+	.one-half,
+	.one-sixth,
+	.one-third,
+	.three-fourths,
+	.three-sixths,
+	.two-fourths,
+	.two-sixths,
+	.two-thirds {
+		margin: 0;
+		width: 100%;
+	}
+
+	.header-image .site-header .site-title a {
+		background-size: contain !important;
+	}
+
+	.category-portfolio .entry {
+		margin-bottom: 40px;
+	}
+
+	.header-about-wrapper {
+		min-height: 100px;
+	}
+
+	#about {
+		margin-top: 100px;
+	}
+
+}

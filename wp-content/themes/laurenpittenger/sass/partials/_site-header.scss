@@ -1,0 +1,113 @@
+/*
+Site Header
+---------------------------------------------------------------------------------------------------- */
+.site-header {
+	background-color: #fff;
+    max-width: 1280px;
+    min-height: 77px;
+    padding: 20px 40px;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+.site-header .wrap {
+	overflow: hidden;
+}
+
+.lp-home .site-header .wrap {
+	border: none;
+}
+
+/* Title Area
+--------------------------------------------- */
+
+.title-area {
+	float: left;
+	padding: 12px 0;
+	width: 35%;
+}
+
+.header-image .title-area {
+	padding: 0;
+}
+
+.site-title {
+	font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.site-title a,
+.site-title a:hover {
+	color: #3a3b39;
+	text-decoration: none;
+}
+
+.site-title a::before {
+	background-color: #3a3b39;
+	border-radius: 50%;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	height: 48px;
+	line-height: 2.1;
+	margin-right: 12px;
+	padding: 3px 4px;
+	text-align: center;
+	width: 48px;
+	text-transform: uppercase;
+}
+
+.site-title a:hover::before {
+	background-color: #40B2E2;
+}
+
+.site-description {
+	color: #999;
+	font-size: 16px;
+	font-weight: 300;
+	height: 0;
+	line-height: 1;
+	margin-bottom: 0;
+	text-indent: -9999px;
+}
+
+/* Full width header, no widgets */
+
+.header-full-width .title-area,
+.header-full-width .site-title {
+	width: 100%;
+}
+
+.header-image .site-description,
+.header-image .site-title a {
+	display: block;
+	text-indent: -9999px;
+}
+
+/* Logo, hide text */
+
+.header-image .site-title a {
+	float: left;
+	min-height: 90px;
+	width: 100%;
+}
+
+/* Widget Area
+--------------------------------------------- */
+
+.site-header .widget-area {
+	float: right;
+	text-align: right;
+	width: 60%;
+}
+
+.site-header .widget {
+	margin-bottom: 0;
+}
+
+.site-header .search-form {
+	float: right;
+	margin-top: 24px;
+}

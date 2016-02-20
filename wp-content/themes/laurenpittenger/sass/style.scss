@@ -1,0 +1,93 @@
+/*
+	Theme Name: Lauren Pittenger Theme
+	Theme URI: http://my.studiopress.com/themes/modern-portfolio/
+	Description: A mobile responsive and HTML5 theme built for the Genesis Framework.
+	Author: StudioPress
+	Author URI: http://www.studiopress.com/
+	Version: 2.1
+
+	Tags: black, white, one-column, two-columns, responsive-layout, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, premise-landing-page
+
+	Template: genesis
+	Template Version: 2.1
+
+	License: GPL-2.0+
+	License URI: http://www.opensource.org/licenses/gpl-license.php
+*/
+
+
+/* Table of Contents
+
+	- HTML5 Reset
+		- Baseline Normalize
+		- Box Sizing
+		- Float Clearing
+	- Defaults
+		- Typographical Elements
+		- Headings
+		- Objects
+		- Gallery
+		- Forms
+		- Tables
+	- Structure and Layout
+		- Site Containers
+		- Column Widths and Positions
+		- Column Classes
+	- Common Classes
+		- WordPress
+		- Genesis
+		- Titles
+	- Widgets
+		- Featured Content
+	- Plugins
+		- Genesis eNews Extended
+		- Genesis Latest Tweets
+		- Jetpack
+	- Site Header
+		- Title Area
+		- Widget Area
+	- Site Navigation
+		- Header Navigation
+		- Primary Navigation
+		- Secondary Navigation
+		- Responsive Menu
+	- Content Area
+		- Home Page
+		- Entries
+		- After Entry
+		- Pagination
+		- Comments
+	- Sidebars
+	- Footer Widgets
+	- Site Footer
+	- Theme Colors
+		- Modern Portfolio Pro Blue
+		- Modern Portfolio Pro Green
+		- Modern Portfolio Pro Orange
+		- Modern Portfolio Pro Purple
+		- Modern Portfolio Pro Red
+	- Media Queries
+		- max-width: 1267px
+		- max-width: 1000px
+		- max-width: 600px
+		- max-width: 480px
+
+*/
+
+@import 'partials/reset';
+@import 'partials/defaults';
+@import 'partials/structure';
+@import 'partials/common';
+@import 'partials/widgets';
+@import 'partials/plugins';
+@import 'partials/site-header';
+@import 'partials/site-navigation';
+@import 'partials/content-area';
+@import 'partials/sidebars';
+@import 'partials/footer-widgets';
+@import 'partials/site-footer';
+@import 'partials/theme-colors';
+@import 'partials/mediaqueries/max-1267';
+@import 'partials/mediaqueries/max-1000';
+@import 'partials/mediaqueries/max-600';
+@import 'partials/mediaqueries/max-480';
