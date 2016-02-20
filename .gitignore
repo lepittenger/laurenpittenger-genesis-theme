@@ -92,4 +92,5 @@ Thumbs.db
 # add your own entries here
 !wp-content/mu-plugins/example-mu-plugin/
 !wp-content/plugins/laurenpittenger-portfolio/
+!wp-content/plugins/laurenpittenger-testimonials/
 !wp-content/themes/laurenpittenger/
