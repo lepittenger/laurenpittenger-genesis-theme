@@ -99,7 +99,7 @@ img.alignright,
 --------------------------------------------- */
 
 .breadcrumb {
-	border-bottom: 1px solid #3a3b39;
+	border-bottom: 1px solid $color-thunder;
 	margin-bottom: 48px;
 	overflow: hidden;
 	padding: 8px 0 24px;
@@ -136,19 +136,15 @@ img.alignright,
 --------------------------------------------- */
 
 .entry-title {
-	font-size: 26px;
+	font-size: 34px;
 	line-height: 1.2;
-	margin-bottom: 5%;
+	margin-bottom: 2%;
 }
 
 .entry-title a,
 .sidebar .widget-title a {
-	color: #3a3b39;
+	color: $color-thunder;
 	text-decoration: none;
-}
-
-.entry-title a:hover {
-	text-decoration: underline;
 }
 
 .widget-title {

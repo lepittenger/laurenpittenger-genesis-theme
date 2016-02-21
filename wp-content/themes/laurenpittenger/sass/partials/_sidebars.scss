@@ -7,36 +7,41 @@ Sidebars
 	margin-bottom: 0;
 }
 
-.sidebar li {
-	list-style-type: none;
-	margin-bottom: 6px;
-}
+.sidebar {
 
-.sidebar ul > li:last-child {
-	margin-bottom: 0;
-}
+	li {
+		list-style-type: none;
+		margin-bottom: 6px;
+	}
 
-.sidebar .widget {
-	background-color: #fff;
-	margin-bottom: 32px;
-	overflow: hidden;
-}
+	ul > li:last-child {
+		margin-bottom: 0;
+	}
 
-.sidebar .widget::after {
-	border-bottom: 1px solid #3a3b39;
-	content: "";
-	display: block;
-	padding-bottom: 32px;
-	width: 20%;
-}
+	.widget {
+		background-color: #fff;
+		margin-bottom: 32px;
+		overflow: hidden;
 
-.sidebar .enews {
-	background-color: #3a3b39;
-	margin-bottom: 8px;
-	padding: 32px;
-}
+		&::after {
+			border-bottom: 1px solid #3a3b39;
+			content: "";
+			display: block;
+			padding-bottom: 32px;
+			width: 20%;
+		}
 
-.sidebar .widget.enews-widget::after {
-	border-bottom: none;
-	padding-bottom: 0;
+	}
+
+	.enews {
+		background-color: #3a3b39;
+		margin-bottom: 8px;
+		padding: 32px;
+	}
+
+	.widget.enews-widget::after {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+	
 }

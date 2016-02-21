@@ -15,7 +15,7 @@ Content Area
 
 #about,
 #services {
-	background-color: #3a3b39;
+	background-color: $color-thunder;
 	color: #fff;
 	font-size: 20px;
 	padding: 60px 0 36px;
@@ -39,8 +39,10 @@ Content Area
 
 .front-page-1 {
 	font-style: italic;
-	margin-bottom: 40px;
-	padding-bottom: 40px;
+	margin-bottom: 80px;
+	padding-bottom: 0;
+	border-left: 10px solid #eee;
+	padding-left: 20px;
 }
 
 .front-page-1 .widget {
@@ -55,17 +57,19 @@ Content Area
 	display: table-cell;
 	vertical-align: middle;
 	width: 100%;
+	font-family: "Playfair Display";
 }
 
 .front-page-1 .widget-title {
 	font-size: 60px;
-	font-weight: 300;
+	font-weight: 700;
 	letter-spacing: 0;
 	margin-bottom: 10px;
 	text-transform: none;
 }
 .front-page-1 .textwidget {
 	font-size: 24px;
+  line-height: 1.5;
 }
 
 .front-page-1 p:last-child {
@@ -153,6 +157,27 @@ Content Area
 	padding-bottom: 5%;
 }
 
+.entry-content a {
+	border-bottom: 5px solid rgba($color-pictonblue, 0.6);
+  display: inline-block;
+  margin-bottom: 4px;
+  line-height: 0.6;
+	text-decoration: none;
+
+	&:hover {
+		color: $color-thunder;
+		border-bottom-color: $color-pictonblue;
+	}
+}
+
+.entry-content img {
+	border-radius: 3px;
+}
+
+.entry-content .portfolio-image a {
+	border-bottom: none;
+}
+
 .entry-content ol,
 .entry-content p,
 .entry-content ul,
@@ -185,27 +210,27 @@ Content Area
 
 .entry-meta {
 	clear: both;
-	color: #888;
-	font-size: 14px;
+	color: lighten($color-thunder, 60%);
+	font-size: 12px;
 }
 
 .entry-meta a {
-	color: #3a3b39;
+	color: lighten($color-thunder, 60%);
 }
 
 .entry-meta a:hover {
-	color: #40B2E2;
+	color: lighten($color-thunder, 40%);
 }
 
 .entry-header .entry-meta {
-	margin-bottom: 24px;
+	margin: 24px 0;
 }
 .post-type-archive-lp_portfolio .lp_portfolio .entry-header {
 	display: none;
 }
 
 .entry-footer .entry-meta::before {
-	border-top: 1px solid #3a3b39;
+	border-top: 1px solid lighten($color-thunder, 80%);
 	content: "";
 	display: block;
 	padding-bottom: 32px;
@@ -213,8 +238,9 @@ Content Area
 }
 
 .entry-comments-link::before {
-	content: "\2014";
+	content: "♥";
 	margin: 0 6px 0 2px;
+	color: $color-buttercup;
 }
 
 .entry-categories,
@@ -226,7 +252,7 @@ Content Area
 --------------------------------------------- */
 
 .after-entry {
-	background-color: #3a3b39;
+	background-color: $color-thunder;
 	color: #fff;
 	margin-bottom: 40px;
 	padding: 8%;
@@ -277,8 +303,7 @@ Content Area
 }
 
 .archive-pagination li a {
-	background-color: #3a3b39;
-	border-radius: 3px;
+	background-color: darken($color-buttercup, 20%);
 	color: #fff;
 	cursor: pointer;
 	display: inline-block;
@@ -289,7 +314,7 @@ Content Area
 
 .archive-pagination li a:hover,
 .archive-pagination li.active a {
-	background-color: #40B2E2;
+	background-color: $color-buttercup;
 	color: #fff;
 }
 

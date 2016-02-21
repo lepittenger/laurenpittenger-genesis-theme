@@ -3,19 +3,21 @@ Site Footer
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-	border-top: 1px solid #3a3b39;
-	padding: 48px 0;
+	background: $color-thunder;
+	color: $color-ecruwhite;
+	padding: 24px 0;
 	text-align: center;
-}
+	font-size: 0.8em;
 
-.site-footer p {
-	margin-bottom: 0;
-}
+	p {
+		margin-bottom: 0;
+	}
 
-.site-footer a {
-	color: #3a3b39;
-}
+	a {
+		color: $color-ecruwhite;
 
-.site-footer a:hover {
-	color: #40B2E2;
+		&:hover {
+			color: $color-buttercup;
+		}
+	}
 }

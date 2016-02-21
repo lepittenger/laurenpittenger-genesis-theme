@@ -52,3 +52,10 @@ Plugins
 img#wpstats {
 	display: none;
 }
+
+/* Lightweight Social Icons
+--------------------------------------------- */
+
+.icon-set-lsi_widget-2 a, .icon-set-lsi_widget-2 a:visited, .icon-set-lsi_widget-2 a:focus {
+	background: $color-buttercup !important;
+}

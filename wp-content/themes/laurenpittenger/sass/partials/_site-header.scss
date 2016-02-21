@@ -2,13 +2,18 @@
 Site Header
 ---------------------------------------------------------------------------------------------------- */
 .site-header {
+	box-shadow: 0 1px 1px rgba(0,0,0,.1);
 	background-color: #fff;
-    max-width: 1280px;
-    min-height: 77px;
-    padding: 20px 40px;
-    top: 0;
-    width: 100%;
-    z-index: 999;
+  max-width: 1280px;
+  min-height: 50px;
+  padding: 12px 40px 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+	position: fixed;
+}
+.admin-bar .site-header {
+	top: 32px;
 }
 .site-header .wrap {
 	overflow: hidden;
@@ -23,7 +28,7 @@ Site Header
 
 .title-area {
 	float: left;
-	padding: 12px 0;
+	padding: 0;
 	width: 35%;
 }
 
@@ -33,15 +38,20 @@ Site Header
 
 .site-title {
 	font-size: 20px;
-    font-weight: 400;
-    line-height: 1;
-    margin-bottom: 0;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 0;
+  font-family: "Playfair Display", serif;
+	font-style: italic;
+  letter-spacing: -0.04em;
 }
 
 .site-title a,
 .site-title a:hover {
-	color: #3a3b39;
+	color: $color-thunder;
 	text-decoration: none;
+	border-bottom: none;
+	line-height: 1;
 }
 
 .site-title a::before {

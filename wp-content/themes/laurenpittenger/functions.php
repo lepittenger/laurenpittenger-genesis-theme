@@ -38,9 +38,9 @@ function lp_load_scripts() {
 
 	wp_enqueue_style( 'dashicons' );
 
-	wp_enqueue_style( 'google-fonts-amatic', '//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-fonts-roboto', '//fonts.googleapis.com/css?family=Roboto:300,500,900', array(), CHILD_THEME_VERSION );
 
-	wp_enqueue_style( 'google-fonts-cabin', '//fonts.googleapis.com/css?family=Josefin+Sans:400,700', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-fonts-playfair', '//fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,900,700italic,900italic', array(), CHILD_THEME_VERSION );
 
 }
 
@@ -172,7 +172,7 @@ function sk_home_about() {
 add_filter('excerpt_more', 'get_read_more_link');
 add_filter( 'the_content_more_link', 'get_read_more_link' );
 function get_read_more_link() {
-   return '...</p><p><a href="' . get_permalink() . '" class="button read-more">Read&nbsp;More</a>';
+   return '... <a href="' . get_permalink() . '" class="read-more">Read&nbsp;More</a>';
 }
 
 // add headings to categories, tags & custom taxonomies if any

@@ -4,12 +4,13 @@ Defaults
 
 /* Typographical Elements
 --------------------------------------------- */
+html { font-size: 1em; }
 
 body {
 	background-color: #fff;
-	color: #3a3b39;
-	font-family: 'PT Serif', cursive;
-	font-size: 16px;
+	color: $color-thunder;
+	font-family: 'Roboto', sans-serif;
+	//font-size: 16px;
 	font-weight: 300;
 	line-height: 2;
 }
@@ -40,7 +41,7 @@ textarea:focus,
 }
 
 a {
-	color: #3a3b39;
+	color: $color-thunder;
 }
 
 a:hover {
@@ -53,7 +54,7 @@ p {
 }
 
 strong {
-	font-weight: 700;
+	font-weight: 500;
 }
 
 ol,
@@ -99,15 +100,17 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 400;
+	font-weight: 700;
 	line-height: 1.2;
 	margin: 0;
 	margin-bottom: 20px;
 	padding: 0;
+	font-family: "Playfair Display", Georgia, serif;
+	letter-spacing: -0.04em;
 }
 
 h1 {
-	font-size: 26px;
+	font-size: 34px;
 }
 
 h2 {
@@ -236,7 +239,7 @@ textarea {
 	background-color: #fff;
 	border: 1px solid #ddd;
 	border-radius: 3px;
-	color: #3a3b39;
+	color: $color-thunder;
 	font-size: 16px;
 	font-weight: 300;
 	padding: 16px;
@@ -265,22 +268,24 @@ textarea:focus {
 }
 
 .button,
+.entry-content .button,
 .widget .button,
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid #3a3b39;
 	box-shadow: none;
-	color: #3a3b39;
+	background: $color-buttercup;
+	border: none;
+	border-bottom: 5px solid darken($color-buttercup, 10%);
 	cursor: pointer;
-	display: block;
 	font-size: 16px;
-	padding: 12px 20px;
+	font-weight: 300;
+	padding: 12px;
 	width: auto;
 	text-align: center;
 	text-decoration: none;
-	text-transform: uppercase;
+	color: white;
 }
 
 .button:hover,
@@ -289,8 +294,20 @@ button:hover,
 input:hover[type="button"],
 input:hover[type="reset"],
 input:hover[type="submit"] {
-	background-color: #333;
+	background-color: darken($color-buttercup, 10%);
+	border-bottom-color: darken($color-buttercup, 20%);
 	color: #fff;
+}
+
+.button:active,
+.widget .button:active,
+button:active,
+input:active[type="button"],
+input:active[type="reset"],
+input:active[type="submit"] {
+	top: 5px;
+	border-bottom: none;
+	position: relative;
 }
 
 .entry-content .button:hover {
@@ -299,7 +316,6 @@ input:hover[type="submit"] {
 
 .button,
 .widget .button {
-	border-radius: 3px;
 	display: inline-block;
 }
 

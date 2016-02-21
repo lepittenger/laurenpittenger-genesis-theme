@@ -3,8 +3,11 @@ Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-	background-color: #3a3b39;
-	color: #fff;
+	border-top: 3px solid $color-thunder;
+	background-color: $color-thunder;
+	//background: url('images/home.png');
+	background-size: cover;
+	color: $color-ecruwhite;
 	clear: both;
 	padding: 60px 0 16px;
 	font-size: 90%;
