@@ -195,4 +195,13 @@ add_filter( 'genesis_term_meta_headline', 'be_default_category_title', 10, 2 );
 function admin_favicon() {
   echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . get_bloginfo( 'stylesheet_directory' ) . '/images/favicon-admin.ico" />';
 }
-  add_action( 'admin_head', 'admin_favicon' );
+add_action( 'admin_head', 'admin_favicon' );
+
+function custom_login_logo() {
+    echo '<style type="text/css">
+    h1 a {
+	    background-image:url('.get_bloginfo('stylesheet_directory').'/images/custom-login-logo.png) !important;
+    }
+    </style>';
+}
+add_action('login_head', 'custom_login_logo');
