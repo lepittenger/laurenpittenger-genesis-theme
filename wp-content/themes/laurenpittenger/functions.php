@@ -42,6 +42,8 @@ function lp_load_scripts() {
 
 	wp_enqueue_style( 'google-fonts-playfair', '//fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,900,700italic,900italic', array(), CHILD_THEME_VERSION );
 
+	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', array(), CHILD_THEME_VERSION );
+
 }
 
 //* Add new image sizes
