@@ -194,11 +194,13 @@ function be_default_category_title( $headline, $term ) {
 }
 add_filter( 'genesis_term_meta_headline', 'be_default_category_title', 10, 2 );
 
+// favicon for admin dashboard
 function admin_favicon() {
   echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . get_bloginfo( 'stylesheet_directory' ) . '/images/favicon-admin.ico" />';
 }
 add_action( 'admin_head', 'admin_favicon' );
 
+// Custom login logo
 function custom_login_logo() {
     echo '<style type="text/css">
     h1 a {
@@ -207,3 +209,12 @@ function custom_login_logo() {
     </style>';
 }
 add_action('login_head', 'custom_login_logo');
+
+//* Customize the entire footer
+remove_action( 'genesis_footer', 'genesis_do_footer' );
+add_action( 'genesis_footer', 'highspire_custom_footer' );
+function highspire_custom_footer() {
+	?>
+	<p>&copy; Copyright 2012 - <?php echo date('Y'); ?> <a href="<?php echo get_bloginfo('url'); ?>"><?php echo get_bloginfo('name'); ?></a>, all rights reserved. Site by me, of course.</p>
+	<?php
+}
