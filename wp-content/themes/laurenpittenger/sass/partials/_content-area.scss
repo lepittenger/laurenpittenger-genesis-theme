@@ -363,8 +363,13 @@ li.comment {
 	border-right: none;
 }
 
+li.comment.bypostauthor {
+	border-left: 10px solid #ccc;
+}
+
 .comment .avatar {
 	margin: 0 16px 24px 0;
+	border-radius: 3px;
 }
 
 .comment-header {
