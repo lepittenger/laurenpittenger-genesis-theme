@@ -42,6 +42,7 @@
 		- Genesis eNews Extended
 		- Genesis Latest Tweets
 		- Jetpack
+		- React
 	- Site Header
 		- Title Area
 		- Widget Area
@@ -59,12 +60,6 @@
 	- Sidebars
 	- Footer Widgets
 	- Site Footer
-	- Theme Colors
-		- Modern Portfolio Pro Blue
-		- Modern Portfolio Pro Green
-		- Modern Portfolio Pro Orange
-		- Modern Portfolio Pro Purple
-		- Modern Portfolio Pro Red
 	- Media Queries
 		- max-width: 1267px
 		- max-width: 1000px
@@ -866,6 +861,11 @@ img#wpstats {
 --------------------------------------------- */
 .icon-set-lsi_widget-2 a, .icon-set-lsi_widget-2 a:visited, .icon-set-lsi_widget-2 a:focus {
   background: #F53C0C !important; }
+
+/* React
+--------------------------------------------- */
+.emoji-reaction, .emoji-reaction-add {
+  border: none; }
 
 /*
 Site Header
@@ -1722,5 +1722,3 @@ Site Footer
 
   #about {
     margin-top: 100px; } }
-
-/*# sourceMappingURL=style.css.map */
