@@ -864,6 +864,15 @@ img#wpstats {
 
 /* React
 --------------------------------------------- */
+#emoji-reaction-selector .container {
+  background: #fff; }
+
+#emoji-reaction-selector .tabs {
+  height: 32px; }
+
+#emoji-reaction-selector .tabs div {
+  border: none; }
+
 .emoji-reaction, .emoji-reaction-add {
   border: none; }
 
