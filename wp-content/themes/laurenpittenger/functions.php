@@ -218,3 +218,11 @@ function highspire_custom_footer() {
 	<p>&copy; Copyright 2012 - <?php echo date('Y'); ?> <a href="<?php echo get_bloginfo('url'); ?>"><?php echo get_bloginfo('name'); ?></a>, all rights reserved. Site by me, of course.</p>
 	<?php
 }
+
+add_filter( 'pre_get_posts', 'be_archive_query' );
+// @link http://www.billerickson.net/customize-the-wordpress-query/
+function be_archive_query( $query ) {
+	if( $query->is_main_query() && $query->is_post_type_archive('lp_portfolio') ) {
+		$query->set( 'posts_per_page', 24 );
+	}
+}

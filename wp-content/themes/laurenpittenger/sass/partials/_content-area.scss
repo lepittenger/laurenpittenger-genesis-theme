@@ -248,6 +248,19 @@ Content Area
 	display: block;
 }
 
+.page-id-4557 .entry-content .checklist {
+	margin-bottom: 24px;
+	p {
+		margin-bottom: 0;
+		input {
+			margin-right: 10px;
+		}
+		&.checked {
+			color: #ccc;
+		}
+	}
+}
+
 /* After Entry
 --------------------------------------------- */
 

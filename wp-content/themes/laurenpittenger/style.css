@@ -566,7 +566,8 @@ Structure and Layout
 --------------------------------------------- */
 .wrap {
   margin: 0 auto;
-  max-width: 1140px; }
+  max-width: 1140px;
+  padding: 0 10px; }
 
 .site-inner {
   clear: both;
@@ -1331,6 +1332,15 @@ Content Area
 .entry-categories,
 .entry-tags {
   display: block; }
+
+.page-id-4557 .entry-content .checklist {
+  margin-bottom: 24px; }
+  .page-id-4557 .entry-content .checklist p {
+    margin-bottom: 0; }
+    .page-id-4557 .entry-content .checklist p input {
+      margin-right: 10px; }
+    .page-id-4557 .entry-content .checklist p.checked {
+      color: #ccc; }
 
 /* After Entry
 --------------------------------------------- */
