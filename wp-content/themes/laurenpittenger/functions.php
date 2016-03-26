@@ -48,7 +48,7 @@ function lp_load_scripts() {
 
 //* Add new image sizes
 add_image_size( 'blog', 340, 140, TRUE );
-add_image_size( 'portfolio', 340, 230, TRUE );
+add_image_size( 'portfolio', 500, 500, TRUE );
 
 //* Add support for custom header
 add_theme_support( 'custom-header', array(
