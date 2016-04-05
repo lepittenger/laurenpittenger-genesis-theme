@@ -14,6 +14,10 @@ Structure and Layout
 .site-inner {
 	clear: both;
 	margin: 141px auto 60px;
+	max-width: 1140px;
+}
+
+.full-width-content .site-inner {
 	max-width: 640px;
 }
 

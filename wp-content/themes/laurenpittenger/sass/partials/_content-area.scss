@@ -413,7 +413,7 @@ li.comment.bypostauthor {
 		left: 0;
 		right: 0;
 		font: 0/0 a;
-		background: rgba(255,255,255,0.75);
+		background: none;
 
 		&:before {
 			content: ' ';
@@ -424,7 +424,7 @@ li.comment.bypostauthor {
 
 		.entry-title {
 			vertical-align: middle;
-			display: inline-block;
+			display: none;
 			text-align: center;
 			margin: 0 auto;
 			box-sizing: border-box;
@@ -451,6 +451,11 @@ li.comment.bypostauthor {
 		    vertical-align: middle;
 		    display: inline-block;
 				visibility: visible;
+				background: rgba(255,255,255,0.85);
+
+				.entry-title {
+					display: inline-block;
+				}
 		}
 	}
 }

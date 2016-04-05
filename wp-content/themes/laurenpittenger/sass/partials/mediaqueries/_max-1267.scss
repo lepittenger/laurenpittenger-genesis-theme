@@ -1,5 +1,9 @@
 @media only screen and (max-width: 1267px) {
 
+	.site-inner, .wrap {
+	    max-width: 86%;
+	}
+
 	.post-type-archive-lp_portfolio .site-inner {
 		max-width: 1280px;
 		padding-right: 40px;

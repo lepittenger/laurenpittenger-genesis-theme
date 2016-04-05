@@ -55,23 +55,31 @@ add_theme_support( 'custom-header', array(
 	'header_image'    => '',
 	'header-selector' => '.site-title a',
 	'header-text'     => false,
-	'height'          => 90,
-	'width'           => 300,
+	'height'          => 100,
+	'width'           => 252,
 ) );
 
 //* Remove sidebars
-unregister_sidebar( 'sidebar' );
+// unregister_sidebar( 'sidebar' );
 unregister_sidebar( 'sidebar-alt' );
 
 //* Remove site layouts
-genesis_unregister_layout( 'content-sidebar' );
-genesis_unregister_layout( 'sidebar-content' );
-genesis_unregister_layout( 'content-sidebar-sidebar' );
-genesis_unregister_layout( 'sidebar-content-sidebar' );
-genesis_unregister_layout( 'sidebar-sidebar-content' );
+// genesis_unregister_layout( 'content-sidebar' );
+// genesis_unregister_layout( 'sidebar-content' );
+// genesis_unregister_layout( 'content-sidebar-sidebar' );
+// genesis_unregister_layout( 'sidebar-content-sidebar' );
+// genesis_unregister_layout( 'sidebar-sidebar-content' );
 
 //* Force full-width-content layout setting
-add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
+//add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
+
+//* force full width layout on single portfolios
+function lp_portfolio_layout() {
+    if( 'lp_portfolio' == get_post_type() ) {
+        return 'full-width-content';
+    }
+}
+add_filter( 'genesis_site_layout', 'lp_portfolio_layout' );
 
 //* Reposition the secondary navigation menu
 remove_action( 'genesis_after_header', 'genesis_do_subnav' );
@@ -193,12 +201,6 @@ function be_default_category_title( $headline, $term ) {
 	return $headline;
 }
 add_filter( 'genesis_term_meta_headline', 'be_default_category_title', 10, 2 );
-
-// favicon for admin dashboard
-function admin_favicon() {
-  echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . get_bloginfo( 'stylesheet_directory' ) . '/images/favicon-admin.ico" />';
-}
-add_action( 'admin_head', 'admin_favicon' );
 
 // Custom login logo
 function custom_login_logo() {

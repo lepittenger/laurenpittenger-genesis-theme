@@ -78,3 +78,10 @@ img#wpstats {
 .emoji-reaction, .emoji-reaction-add {
 	border: none;
 }
+
+/* Gravity Forms
+------------------------------------------ */
+
+.gform_wrapper .left_label .gfield_label {
+	font-weight: normal !important;
+}
