@@ -1,25 +1,14 @@
 /*
 Site Header
 ---------------------------------------------------------------------------------------------------- */
-.site-header {
-	box-shadow: 0 1px 1px rgba(0,0,0,.1);
-	background-color: #fff;
-  max-width: 1280px;
-  min-height: 100px;
-  padding: 12px 0 0;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-	position: fixed;
-}
-.admin-bar .site-header {
-	top: 32px;
-}
+
 .site-header .wrap {
+  box-shadow: 0 4px 2px -2px #DEDEDE;
 	overflow: hidden;
+	padding: 32px 0;
 }
 
-.lp-home .site-header .wrap {
+.mpp-home .site-header .wrap {
 	border: none;
 }
 
@@ -28,7 +17,7 @@ Site Header
 
 .title-area {
 	float: left;
-	padding: 0;
+	padding: 12px 0;
 	width: 35%;
 }
 
@@ -37,29 +26,27 @@ Site Header
 }
 
 .site-title {
-	font-size: 20px;
-  font-weight: 700;
-  line-height: 1.5;
-  margin-bottom: 0;
-  font-family: "Playfair Display", serif;
-	font-style: italic;
-  letter-spacing: -0.04em;
+	font-family: 'Lato', sans-serif;
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 1;
+	margin: 0 0 8px;
+	text-transform: lowercase;
 }
 
 .site-title a,
 .site-title a:hover {
-	color: $color-thunder;
+	color: #222;
 	text-decoration: none;
-	border-bottom: none;
-	line-height: 1;
 }
 
 .site-title a::before {
-	background-color: #3a3b39;
+	background-color: #222;
 	border-radius: 50%;
 	color: #fff;
 	cursor: pointer;
 	display: inline-block;
+	font-family: 'Merriweather', serif;
 	height: 48px;
 	line-height: 2.1;
 	margin-right: 12px;
@@ -70,7 +57,7 @@ Site Header
 }
 
 .site-title a:hover::before {
-	background-color: #40B2E2;
+	background-color: #27b4b2;
 }
 
 .site-description {
@@ -110,6 +97,7 @@ Site Header
 .site-header .widget-area {
 	float: right;
 	text-align: right;
+	padding-top: 33px;
 	width: 60%;
 }
 

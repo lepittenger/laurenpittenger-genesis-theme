@@ -18,17 +18,22 @@ function be_portfolio_post_class( $classes ) {
 	return $classes;
 }
 add_filter( 'post_class', 'be_portfolio_post_class' );
+
 //* Remove the entry meta in the entry header
 remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+
 //* Remove the standard post content
 remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
+
 //* Show featured image linking to single Post
-add_action( 'genesis_entry_content', 'sk_do_post_content' );
-function sk_do_post_content() {
-	if ( $image = genesis_get_image( 'format=url&size=portfolio' ) ) {
+remove_action( 'genesis_entry_header', 'genesis_do_post_image', 8 );
+add_action( 'genesis_entry_header', 'lp_do_post_header', 8 );
+function lp_do_post_header() {
+	if ( $image = genesis_get_image( 'format=url&size=large' ) ) {
 		printf( '<div class="portfolio-image"><a href="%s" rel="bookmark"><img src="%s" alt="%s" /></a></div>', get_permalink(), $image, the_title_attribute( 'echo=0' ) );
 	}
 }
+
 //* Remove the entry meta in the entry footer
 remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 genesis();

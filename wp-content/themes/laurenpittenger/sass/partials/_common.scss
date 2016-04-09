@@ -108,12 +108,12 @@ img.alignright,
 
 .archive-description,
 .author-box {
-	background-color: #f5f5f5;
+	background-color: black;
 	margin-bottom: 40px;
 }
 
 .archive-description {
-	padding: 40px 40px 24px;
+	padding: 10px 20px;
 }
 
 .author-box {
@@ -139,7 +139,19 @@ img.alignright,
 .entry-title {
 	font-size: 34px;
 	line-height: 1.2;
-	margin-bottom: 2%;
+	margin-bottom: 3%;
+}
+
+.post-1228.page .entry-title {
+	color: white;
+	background: #000;
+  padding: 10px 20px;
+}
+
+.page-template-page_blog .post .entry-title,
+.category .post .entry-title,
+.tag .post .entry-title {
+	margin-top: 3%;
 }
 
 .entry-title a,
@@ -166,6 +178,7 @@ img.alignright,
 }
 
 .archive-title {
-	font-size: 20px;
-	margin-bottom: 24px;
+	font-size: 34px;
+	margin-bottom: 0;
+	color: white;
 }

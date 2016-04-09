@@ -15,10 +15,14 @@ Content Area
 
 #about,
 #services {
-	background-color: $color-thunder;
+	background-color: #000;
 	color: #fff;
 	font-size: 20px;
 	padding: 60px 0 36px;
+}
+
+#about {
+	font-size: 26px;
 }
 
 #about .entry-meta a:hover,
@@ -35,76 +39,6 @@ Content Area
 #services .entry-meta a,
 #services .entry-title a:hover {
 	color: #ccc;
-}
-
-.front-page-1 {
-	font-style: italic;
-	margin-bottom: 80px;
-	padding-bottom: 0;
-	border-left: 10px solid #eee;
-	padding-left: 20px;
-}
-
-.front-page-1 .widget {
-	margin-bottom: 40px;
-}
-
-.front-page-1 .widget:last-child {
-	margin-bottom: 0;
-}
-
-.front-page-1 .widget-area {
-	display: table-cell;
-	vertical-align: middle;
-	width: 100%;
-	font-family: "Playfair Display";
-}
-
-.front-page-1 .widget-title {
-	font-size: 60px;
-	font-weight: 700;
-	letter-spacing: 0;
-	margin-bottom: 10px;
-	text-transform: none;
-}
-.front-page-1 .textwidget {
-	font-size: 24px;
-  line-height: 1.5;
-}
-
-.front-page-1 p:last-child {
-	margin-bottom: 0;
-}
-
-.content .front-page-1 .widget a.button,
-.front-page-1 button,
-.front-page-1 input[type="button"],
-.front-page-1 input[type="reset"],
-.front-page-1 input[type="submit"],
-.front-page-1 .entry-content a.button,
-.front-page-1 .entry-content a.more-link {
-	border: 1px solid #fff;
-	color: #fff;
-	margin-top: 40px;
-}
-
-.content .front-page-1 .widget a.button:hover,
-.content .front-page-1 .widget a.button:focus,
-.front-page-1 button:hover,
-.front-page-1 button:focus,
-.front-page-1 input:hover[type="button"],
-.front-page-1 input:focus[type="button"],
-.front-page-1 input:hover[type="reset"],
-.front-page-1 input:focus[type="reset"],
-.front-page-1 input:hover[type="submit"],
-.front-page-1 input:focus[type="submit"],
-.front-page-1 .entry-content a.button:hover,
-.front-page-1 .entry-content a.button:focus,
-.front-page-1 .entry-content a.more-link:hover,
-.front-page-1 .entry-content a.more-link:focus {
-	border: 1px solid #fff;
-	background-color: #fff;
-	color: #333;
 }
 
 #portfolio {
@@ -148,30 +82,27 @@ Content Area
     clear: both;
 }
 
+.lp-home #about .widget-title {
+	font-size: 40px;
+}
+
+.lp-home #about .widget_text {
+	width: 65.81196581196582%;
+	float: left;
+}
+
+.lp-home #about .featuredpage {
+	margin-right: 0;
+	margin-bottom: 0;
+}
+
 
 /* Entries
 --------------------------------------------- */
 
 .entry {
-	margin-bottom: 5%;
-	padding-bottom: 5%;
-}
-
-.entry-content a {
-	border-bottom: 5px solid rgba($color-pictonblue, 0.6);
-  display: inline-block;
-  margin-bottom: 4px;
-  line-height: 0.6;
-	text-decoration: none;
-
-	&:hover {
-		color: $color-thunder;
-		border-bottom-color: $color-pictonblue;
-	}
-}
-
-.entry-content img {
 	border-radius: 3px;
+	margin-bottom: 40px;
 }
 
 .entry-content ol,
@@ -204,36 +135,50 @@ Content Area
 	width: 50%;
 }
 
+.entry-content img {
+	border-radius: 3px;
+}
+
 .entry-meta {
 	clear: both;
-	color: lighten($color-thunder, 60%);
-	font-size: 12px;
+	color: #888;
+	font-size: 14px;
 }
 
 .entry-meta a {
-	color: lighten($color-thunder, 60%);
+	color: #888888;
 }
 
 .entry-meta a:hover {
-	color: lighten($color-thunder, 40%);
+	color: #27b4b2;
 }
 
 .entry-header .entry-meta {
-	margin: 24px 0;
+	margin-bottom: 24px;
+}
+
+.page-template-page_blog .entry-header .entry-meta {
+	margin-bottom: 0;
 }
 
 .entry-footer .entry-meta::before {
-	border-top: 1px solid lighten($color-thunder, 80%);
+	border-top: 1px solid #888888;
 	content: "";
 	display: block;
 	padding-bottom: 32px;
 	width: 10%;
 }
 
+.single-lp_portfolio .entry-footer .entry-meta::before {
+	border-top: none;
+	padding-bottom: 0;
+}
+
 .entry-comments-link::before {
-	content: "♥";
+	content: "\f004";
 	margin: 0 6px 0 2px;
 	color: $color-buttercup;
+	font-family: "FontAwesome";
 }
 
 .entry-categories,
@@ -258,7 +203,7 @@ Content Area
 --------------------------------------------- */
 
 .after-entry {
-	background-color: $color-thunder;
+	background-color: #222;
 	color: #fff;
 	margin-bottom: 40px;
 	padding: 8%;
@@ -280,7 +225,7 @@ Content Area
 }
 
 .after-entry .entry-title a:hover {
-	color: #40B2E2;
+	color: #27b4b2;
 }
 
 .after-entry p:last-child {
@@ -309,7 +254,8 @@ Content Area
 }
 
 .archive-pagination li a {
-	background-color: darken($color-buttercup, 20%);
+	background-color: #222;
+	border-radius: 3px;
 	color: #fff;
 	cursor: pointer;
 	display: inline-block;
@@ -320,7 +266,7 @@ Content Area
 
 .archive-pagination li a:hover,
 .archive-pagination li.active a {
-	background-color: $color-buttercup;
+	background-color: #27b4b2;
 	color: #fff;
 }
 
@@ -393,69 +339,9 @@ li.comment.bypostauthor {
 	padding: 24px;
 }
 
-/* Portfolio section
---------------------------------------------- */
+/* Portfolio */
 
-.post-type-archive-lp_portfolio .entry.lp_portfolio {
-    padding-bottom: 0;
-    border: 3px solid #f5f5f5;
-		position: relative;
-}
-
-.post-type-archive-lp_portfolio .lp_portfolio {
-	@include transition(all, 0.3s, ease-in);
-
-	.entry-header {
-		visibility: hidden;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		font: 0/0 a;
-		background: none;
-
-		&:before {
-			content: ' ';
-			display: inline-block;
-			height: 100%;
-			vertical-align: middle;
-		}
-
-		.entry-title {
-			vertical-align: middle;
-			display: none;
-			text-align: center;
-			margin: 0 auto;
-			box-sizing: border-box;
-			width: 100%;
-			padding: 5px 20px;
-			background: none;
-		}
-	}
-
-	.entry-content {
-		line-height: 0;
-    height: auto;
-    display: block;
-
-		.portfolio-image a {
-			border-bottom: none;
-			margin-bottom: 0;
-		}
-	}
-
-	// when portfolio item hovered
-	&:hover {
-		.entry-header {
-		    vertical-align: middle;
-		    display: inline-block;
-				visibility: visible;
-				background: rgba(255,255,255,0.85);
-
-				.entry-title {
-					display: inline-block;
-				}
-		}
-	}
+.post-type-archive-lp_portfolio h2.entry-title {
+  font-size: 18px;
+  font-weight: 300;
 }

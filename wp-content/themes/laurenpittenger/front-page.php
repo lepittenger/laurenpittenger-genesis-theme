@@ -9,17 +9,10 @@ add_action( 'wp_enqueue_scripts', 'lp_enqueue_scripts' );
  */
 function lp_enqueue_scripts() {
 
-	if ( is_active_sidebar( 'home-portfolio' ) || is_active_sidebar( 'home-services' ) || is_active_sidebar( 'home-blog' ) ) {
-
+	if ( is_active_sidebar( 'home-about' ) || is_active_sidebar( 'home-portfolio' ) || is_active_sidebar( 'home-services' ) || is_active_sidebar( 'home-blog' ) ) {
 		wp_enqueue_script( 'scrollTo', get_stylesheet_directory_uri() . '/js/jquery.scrollTo.min.js', array( 'jquery' ), '1.4.5-beta', true );
 		wp_enqueue_script( 'localScroll', get_stylesheet_directory_uri() . '/js/jquery.localScroll.min.js', array( 'scrollTo' ), '1.2.8b', true );
 		wp_enqueue_script( 'scroll', get_stylesheet_directory_uri() . '/js/scroll.js', array( 'localScroll' ), '', true );
-
-		//* Enqueue Backstretch scripts
-		wp_enqueue_script( 'mmp-backstretch', get_bloginfo( 'stylesheet_directory' ) . '/js/backstretch.js', array( 'jquery' ), '1.0.0' );
-		wp_enqueue_script( 'mmp-backstretch-set', get_bloginfo('stylesheet_directory').'/js/backstretch-set.js' , array( 'jquery', 'atmosphere-backstretch' ), '1.0.0' );
-		wp_enqueue_script( 'mmp-front-script', get_bloginfo( 'stylesheet_directory' ) . '/js/front-page.js', array( 'jquery' ), '1.0.0' );
-
 	}
 }
 
@@ -63,6 +56,11 @@ function lp_body_class( $classes ) {
 }
 
 function lp_homepage_widgets() {
+
+	genesis_widget_area( 'home-about', array(
+		'before' => '<div id="about"><div class="wrap">',
+		'after'  => '</div></div>',
+	) );
 
 	genesis_widget_area( 'home-portfolio', array(
 		'before' => '<div id="portfolio"><div class="wrap">',

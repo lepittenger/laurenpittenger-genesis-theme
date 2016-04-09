@@ -22,7 +22,7 @@ Plugins
 }
 
 .enews-widget input[type="submit"] {
-	background-color: #40B2E2;
+	background-color: #27b4b2;
 	color: #fff;
 	margin: 0;
 	width: 100%;
@@ -31,7 +31,7 @@ Plugins
 .enews-widget input:hover[type="submit"],
 #services a.button:hover {
 	background-color: #fff;
-	color: #3a3b39;
+	color: #222;
 }
 
 .enews form + p,
@@ -58,25 +58,7 @@ img#wpstats {
 
 .icon-set-lsi_widget-2 a, .icon-set-lsi_widget-2 a:visited, .icon-set-lsi_widget-2 a:focus {
 	background: $color-buttercup !important;
-}
-
-/* React
---------------------------------------------- */
-
-#emoji-reaction-selector .container {
-	background: #fff;
-}
-
-#emoji-reaction-selector .tabs {
-	height: 32px;
-}
-
-#emoji-reaction-selector .tabs div {
-	border: none;
-}
-
-.emoji-reaction, .emoji-reaction-add {
-	border: none;
+	font-size: 18px !important;
 }
 
 /* Gravity Forms
@@ -84,4 +66,11 @@ img#wpstats {
 
 .gform_wrapper .left_label .gfield_label {
 	font-weight: normal !important;
+}
+
+/* SB Instagram */
+
+#sbi_images {
+  margin-right: -20px;
+  margin-left: -20px;
 }

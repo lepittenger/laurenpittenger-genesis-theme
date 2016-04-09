@@ -48,7 +48,8 @@ function lp_load_scripts() {
 
 //* Add new image sizes
 add_image_size( 'blog', 340, 140, TRUE );
-add_image_size( 'portfolio', 500, 500, TRUE );
+add_image_size( 'blog-lg', 740, 240, TRUE );
+add_image_size( 'portfolio', 340, 230, TRUE );
 
 //* Add support for custom header
 add_theme_support( 'custom-header', array(
@@ -59,27 +60,13 @@ add_theme_support( 'custom-header', array(
 	'width'           => 252,
 ) );
 
-//* Remove sidebars
-// unregister_sidebar( 'sidebar' );
-unregister_sidebar( 'sidebar-alt' );
-
-//* Remove site layouts
-// genesis_unregister_layout( 'content-sidebar' );
-// genesis_unregister_layout( 'sidebar-content' );
-// genesis_unregister_layout( 'content-sidebar-sidebar' );
-// genesis_unregister_layout( 'sidebar-content-sidebar' );
-// genesis_unregister_layout( 'sidebar-sidebar-content' );
-
-//* Force full-width-content layout setting
-//add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
-
 //* force full width layout on single portfolios
+add_filter( 'genesis_site_layout', 'lp_portfolio_layout' );
 function lp_portfolio_layout() {
     if( 'lp_portfolio' == get_post_type() ) {
         return 'full-width-content';
     }
 }
-add_filter( 'genesis_site_layout', 'lp_portfolio_layout' );
 
 //* Reposition the secondary navigation menu
 remove_action( 'genesis_after_header', 'genesis_do_subnav' );
@@ -146,38 +133,6 @@ genesis_register_sidebar( array(
 	'description' => __( 'This is the Blog section of the homepage.','lp' ),
 ) );
 
-add_filter( 'genesis_post_meta', 'lp_post_meta_filter' );
-//* remove the post meta on portfolio category posts
-function lp_post_meta_filter($post_meta) {
-	if ( !in_category('portfolio') && is_single() ) {
-		$post_meta = '[post_categories before="Filed Under: "] [post_tags before="Tagged: "]';
-		return $post_meta;
-	}
-}
-
-add_filter( 'genesis_post_info', 'lp_post_info_filter' );
-//* remove the post info on portfolio category posts
-function lp_post_info_filter($post_info) {
-	if ( !in_category('portfolio') ) {
-		$post_info = '[post_date] [post_comments] [post_edit]';
-		return $post_info;
-	}
-}
-
-//* Display the contents of 'Home - About' widget area
-add_action( 'genesis_before_loop', 'sk_home_about' );
-function sk_home_about() {
-
-	if (! is_front_page() )
-		return;
-
-	genesis_widget_area( 'home-about', array(
-		'before' => '<div id="front-page-1" class="front-page-1"><div class="widget-area"><div class="wrap">',
-		'after'  => '</div></div></div>',
-	) );
-
-}
-
 // Add Read More Link to Excerpts
 add_filter('excerpt_more', 'get_read_more_link');
 add_filter( 'the_content_more_link', 'get_read_more_link' );
@@ -190,27 +145,22 @@ function be_default_category_title( $headline, $term ) {
 	if( ( is_category() || is_tag() || is_tax() ) && empty( $headline ) )
 		$headline = $term->name;
 
-		if( is_category() ) {
-			$headline = 'Posts in category: '. $headline;
-		} else if ( is_tag() ) {
-			$headline = 'Posts tagged: '. $headline;
-		} else if ( is_tax() ) {
-			'Posts in: '. $headline;
-		}
-
 	return $headline;
 }
 add_filter( 'genesis_term_meta_headline', 'be_default_category_title', 10, 2 );
 
 // Custom login logo
+add_action('login_head', 'custom_login_logo');
 function custom_login_logo() {
     echo '<style type="text/css">
     h1 a {
 	    background-image:url('.get_bloginfo('stylesheet_directory').'/images/custom-login-logo.png) !important;
+			background-size: 320px 127px !important;
+			width: 320px !important;
+			height: 127px !important;
     }
     </style>';
 }
-add_action('login_head', 'custom_login_logo');
 
 //* Customize the entire footer
 remove_action( 'genesis_footer', 'genesis_do_footer' );
@@ -226,5 +176,21 @@ add_filter( 'pre_get_posts', 'be_archive_query' );
 function be_archive_query( $query ) {
 	if( $query->is_main_query() && $query->is_post_type_archive('lp_portfolio') ) {
 		$query->set( 'posts_per_page', 24 );
+	}
+}
+
+// Move image above post title in Genesis Framework 2.0
+remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
+add_action( 'genesis_entry_header', 'genesis_do_post_image', 8 );
+
+// add ability to hide GF labels
+add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
+
+// don't show post meta on pages and portfolio singles
+add_filter( 'genesis_post_info', 'sp_post_info_filter' );
+function sp_post_info_filter($post_info) {
+	if ( !is_page() && !('lp_portfolio' == get_post_type() ) ) {
+		$post_info = '[post_date] [post_comments] [post_edit]';
+		return $post_info;
 	}
 }

@@ -21,6 +21,45 @@ Widgets
 	padding: 0;
 }
 
+#gform_2 {
+	.gform_body {
+		display: inline-block;
+	  width: 65%;
+	}
+	.gform_footer {
+		width: auto;
+		padding: 0;
+		width: 30%;
+		float: right;
+		margin: 0;
+	}
+	label.gfield_label+div.ginput_container {
+		margin-top: 0 !important;
+	}
+	input[type="text"] {
+		margin: 0;
+		background-color: #fff;
+		border: 1px solid #ddd;
+		border-radius: 3px;
+		color: #000;
+		font-size: 16px;
+		font-weight: 300;
+		padding: 16px;
+		width: 100%;
+		&:focus {
+			border: 1px solid #aaa;
+	    outline: none;
+		}
+  }
+  input[type="submit"] {
+    float: right;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+		font-size: 16px;
+  }
+}
+
 /* Featured Content
 --------------------------------------------- */
 
@@ -38,4 +77,19 @@ Widgets
 
 .featured-content .entry-title a {
 	text-decoration: none;
+}
+
+/* Genesis User Profile
+--------------------------------------------- */
+
+.user-profile {
+	font-size: 0.9em;
+}
+
+.user-profile .avatar {
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	float: none;
+	margin-bottom: 10px;
 }

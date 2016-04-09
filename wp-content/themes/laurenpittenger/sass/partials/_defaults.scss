@@ -4,13 +4,12 @@ Defaults
 
 /* Typographical Elements
 --------------------------------------------- */
-html { font-size: 1em; }
 
 body {
 	background-color: #fff;
-	color: $color-thunder;
+	color: #000;
 	font-family: 'Roboto', sans-serif;
-	//font-size: 16px;
+	font-size: 18px;
 	font-weight: 300;
 	line-height: 2;
 }
@@ -31,12 +30,12 @@ textarea:focus,
 }
 
 ::-moz-selection {
-	background-color: #3a3b39;
+	background-color: #27b4b2;
 	color: #fff;
 }
 
 ::selection {
-	background-color: #3a3b39;
+	background-color: #222;
 	color: #fff;
 }
 
@@ -91,6 +90,11 @@ cite {
 	font-style: normal;
 }
 
+.screen-reader-text {
+	position: absolute;
+	left: -9000px;
+}
+
 /* Headings
 --------------------------------------------- */
 
@@ -105,8 +109,6 @@ h6 {
 	margin: 0;
 	margin-bottom: 20px;
 	padding: 0;
-	font-family: "Playfair Display", Georgia, serif;
-	letter-spacing: -0.04em;
 }
 
 h1 {
@@ -274,18 +276,17 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	box-shadow: none;
-	background: $color-buttercup;
+	background-color: #27b4b2;
 	border: none;
-	border-bottom: 5px solid darken($color-buttercup, 10%);
+	box-shadow: none;
+	color: #fff;
 	cursor: pointer;
+	display: block;
 	font-size: 16px;
-	font-weight: 300;
-	padding: 12px;
+	padding: 16px 24px;
 	width: auto;
 	text-align: center;
 	text-decoration: none;
-	color: white;
 }
 
 .button:hover,
@@ -294,20 +295,8 @@ button:hover,
 input:hover[type="button"],
 input:hover[type="reset"],
 input:hover[type="submit"] {
-	background-color: darken($color-buttercup, 10%);
-	border-bottom-color: darken($color-buttercup, 20%);
+	background-color: #333;
 	color: #fff;
-}
-
-.button:active,
-.widget .button:active,
-button:active,
-input:active[type="button"],
-input:active[type="reset"],
-input:active[type="submit"] {
-	top: 5px;
-	border-bottom: none;
-	position: relative;
 }
 
 .entry-content .button:hover {
@@ -316,6 +305,7 @@ input:active[type="submit"] {
 
 .button,
 .widget .button {
+	border-radius: 3px;
 	display: inline-block;
 }
 
@@ -331,7 +321,7 @@ input[type="search"]::-webkit-search-results-button {
 	padding: 20px 24px;
 }
 
-.lp-landing a.button {
+.mpp-landing a.button {
 	margin-top: 16px;
 }
 
