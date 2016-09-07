@@ -69,6 +69,7 @@
 	- Media Queries
 		- max-width: 1267px
 		- max-width: 1000px
+		- max-width: 700px
 		- max-width: 600px
 		- max-width: 480px
 
@@ -90,5 +91,6 @@
 @import 'partials/site-footer';
 @import 'partials/mediaqueries/max-1267';
 @import 'partials/mediaqueries/max-1000';
+@import 'partials/mediaqueries/max-700';
 @import 'partials/mediaqueries/max-600';
 @import 'partials/mediaqueries/max-480';

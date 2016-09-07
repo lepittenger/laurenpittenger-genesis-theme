@@ -67,6 +67,7 @@
 	- Media Queries
 		- max-width: 1267px
 		- max-width: 1000px
+		- max-width: 700px
 		- max-width: 600px
 		- max-width: 480px
 
@@ -1195,7 +1196,8 @@ Content Area
   padding: 60px 0 36px; }
 
 #about {
-  font-size: 26px; }
+  font-size: 26px;
+  line-height: 1.4; }
 
 #about .entry-meta a:hover,
 #about .entry-title a,
@@ -1249,10 +1251,6 @@ Content Area
 
 .lp-home #about .widget-title {
   font-size: 40px; }
-
-.lp-home #about .widget_text {
-  width: 65.81196581196582%;
-  float: left; }
 
 .lp-home #about .featuredpage {
   margin-right: 0;
@@ -1583,18 +1581,8 @@ Site Footer
 @media only screen and (max-width: 1267px) {
   .site-inner,
   .wrap {
-    max-width: 90%; }
-
-  .post-type-archive-lp_portfolio .site-inner {
-    max-width: 1280px;
-    padding-right: 40px;
-    padding-left: 40px; } }
+    max-width: 90%; } }
 @media only screen and (max-width: 1000px) {
-  .content,
-  .footer-widgets-1,
-  .footer-widgets-2,
-  .footer-widgets-3,
-  .sidebar-primary,
   .site-header .widget-area,
   .title-area {
     width: 100%; }
@@ -1642,10 +1630,17 @@ Site Footer
 
   .site-footer,
   .site-header .wrap {
-    padding: 24px 0; }
+    padding: 24px 0; } }
+@media only screen and (max-width: 700px) {
+  .content,
+  .footer-widgets-1,
+  .footer-widgets-2,
+  .footer-widgets-3,
+  .sidebar-primary {
+    width: 100%; }
 
-  .footer-widgets-1 {
-    margin: 0; } }
+  .single-lp_portfolio .site-inner {
+    max-width: 90%; } }
 @media only screen and (max-width: 600px) {
   .lp-home .content .featuredpost {
     text-align: center; }
@@ -1726,7 +1721,13 @@ Site Footer
     padding: 14px 20px;
     position: relative;
     text-transform: none;
-    width: 100%; } }
+    width: 100%; }
+
+  #blog img, #portfolio img {
+    margin-bottom: 0; }
+
+  #blog .aligncenter {
+    margin-bottom: 10px; } }
 @media only screen and (max-width: 480px) {
   .five-sixths,
   .four-sixths,

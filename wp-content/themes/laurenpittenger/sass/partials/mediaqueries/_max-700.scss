@@ -1,0 +1,19 @@
+@media only screen and (max-width: 700px) {
+
+  .content,
+	.footer-widgets-1,
+	.footer-widgets-2,
+	.footer-widgets-3,
+	.sidebar-primary {
+    width: 100%;
+  }
+
+  .single-lp_portfolio .site-inner {
+    max-width: 90%;
+  }
+
+  .footer-widgets-1 {
+		margin: 0;
+	}
+
+}

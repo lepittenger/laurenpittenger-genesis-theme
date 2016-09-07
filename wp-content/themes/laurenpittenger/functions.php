@@ -194,3 +194,9 @@ function sp_post_info_filter($post_info) {
 		return $post_info;
 	}
 }
+
+// Add website verification meta tag for Pinterest
+add_action( 'genesis_meta', 'lp_pinterest_meta_tag' );
+function sp_viewport_meta_tag() {
+	echo '<meta name="p:domain_verify" content="807bb20b2b2b5e0c96a901fac7e5e38f"/>';
+}
